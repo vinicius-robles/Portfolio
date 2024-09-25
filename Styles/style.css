@@ -67,6 +67,28 @@ body {
     font-weight: 600;
 }
 
+.titulo__MP {
+    font-family: var(--fonte-primaria);
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--cor-secundaria);
+}
+
+.apresentacao__links__MP {
+    color: var(--cor-secundaria);
+    font-size: 1.75rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.apresentacao__links__MP:hover {
+    color: var(--cor-hover-menu);
+}
+
+.apresentacao__imagem__MP {
+    width: 80%;
+}
+
 .apresentacao__conteudo__subtitulo {
     font-family: var(--fonte-primaria);
     font-size: 1.75rem;
