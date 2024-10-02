@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@100..900&display=swap');
 
 :root {
@@ -19,7 +18,7 @@
 
 body {
     /* height: 100vh; */
-    box-sizing: border-box;    
+    box-sizing: border-box;
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
 }
@@ -30,7 +29,7 @@ body {
 
 .cabecalho__menu {
     display: flex;
-    gap: 80px;
+    gap: 5em;
 }
 
 .cabecalho__menu__links {
@@ -43,6 +42,14 @@ body {
 
 .cabecalho__menu__links:hover {
     color: var(--cor-hover-menu);
+}
+
+.cabecalho__menu__texto {
+    display: block;
+}
+
+.cabecalho__menu__links__icone {
+    display: none;
 }
 
 .apresentacao {
@@ -92,7 +99,7 @@ body {
 .apresentacao__conteudo__subtitulo {
     font-family: var(--fonte-primaria);
     font-size: 1.75rem;
-    font-weight: 600;    
+    font-weight: 600;
 }
 
 .titulo-destaque {
@@ -161,15 +168,19 @@ body {
     font-weight: 600;
 }
 
+.apresentacao__lista__links:hover {
+    color: var(--cor-hover-menu);
+}
+
 .apresentacao__imagem {
     width: 35%;
     height: auto;
     object-fit: contain;
     position: fixed;
-        top: 260px;
-        z-index: 2;
-        right: 260px;
-        width: 450px;
+    top: 260px;
+    z-index: 2;
+    right: 260px;
+    width: 450px;
 }
 
 .rodape {
@@ -190,7 +201,7 @@ body {
     .cabecalho__menu {
         justify-content: center;
     }
-    
+
     .apresentacao {
         flex-direction: column-reverse;
         padding: 3% 5%;
@@ -202,7 +213,54 @@ body {
     }
 
     .apresentacao__imagem {
-        width: 50%
-    }    
+        width: 70%;
+        height: auto;
+        object-fit: contain;
+        position: relative;
+        top: auto;
+        z-index: 0;
+        right: auto;
+    }
 
+}
+
+@media screen and (max-width: 478px) {
+
+     main {
+        margin: 1em 0;
+    }
+
+    .cabecalho__menu {
+        gap: 3.5em;
+    }
+
+    .cabecalho__menu__links__icone {
+        display: block;
+    }
+
+    .cabecalho__menu__texto {
+        display: none;
+    }
+
+    .apresentacao__conteudo__titulo {
+        font-size: 1.75rem;
+    }
+
+    .apresentacao__conteudo__texto {
+        font-size: 1.25rem;
+    }
+
+    .apresentacao__conteudo {
+        text-align: center;
+    }
+
+    .apresentacao__conteudo__subtitulo {
+        font-size: 1.25rem;
+    }
+
+    .apresentacao__links__navegacao {
+        font-size: 1.25rem;
+        width: 60%;
+        align-items: center;
+    }
 }
