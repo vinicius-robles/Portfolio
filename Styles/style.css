@@ -153,6 +153,31 @@ body {
   flex-direction: column;
 }
 
+.apresentacao__lista__MP {
+  list-style: none;
+  font-family: var(--fonte-secundaria);
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin: 10px 0;
+  line-height: 20px;
+}
+
+.apresentacao__lista__titulo {
+  font-size: 1rem;
+  line-height: 23px;
+}
+
+.apresentacao__lista__MP li {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 6px 0;
+}
+
+.lista__tecnologias img {
+  margin: 2px;
+}
+
 .apresentacao__lista__texto {
   font-family: var(--fonte-secundaria);
   font-size: 1.2rem;
@@ -260,5 +285,21 @@ body {
     font-size: 1.25rem;
     width: 60%;
     align-items: center;
+  }
+
+  .apresentacao__lista__MP {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    font-family: var(--fonte-secundaria);
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin: 10px 0;
+    line-height: 20px;
+  }
+
+  .lista__tecnologias {
+    justify-content: center;
   }
 }
