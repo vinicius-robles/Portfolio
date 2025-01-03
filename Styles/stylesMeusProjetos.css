@@ -12,13 +12,13 @@
 }
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  /* height: 100vh; */
-  box-sizing: border-box;
+  height: 100vh;
   background-color: var(--cor-primaria);
   color: var(--cor-secundaria);
 }
@@ -52,40 +52,26 @@ body {
   display: none;
 }
 
-.apresentacao {
-  padding: 5% 15%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 82px;
-}
-
-.apresentacao__meus__projetos {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 5% 23%;
-  width: 70%;
-}
-
-.apresentacao__secao__MP {
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 38px;
+  margin: 5% 0;
+  width: auto;
 }
 
-.apresentacao__conteudo {
+main section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 38px;
+  margin: 0 0 5% 0;
 }
 
-.apresentacao__conteudo__titulo {
-  font-family: var(--fonte-primaria);
-  font-size: 2.25rem;
-  font-weight: 600;
+main section div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .titulo__MP {
@@ -113,119 +99,33 @@ body {
 
 .apresentacao__imagem__MP {
   margin-top: 26px;
-  width: 80%;
-}
-
-.apresentacao__conteudo__subtitulo {
-  font-family: var(--fonte-primaria);
-  font-size: 1.75rem;
-  font-weight: 600;
-}
-
-.titulo-destaque {
-  color: var(--cor-terciaria);
-}
-
-.apresentacao__conteudo__texto {
-  font-family: var(--fonte-secundaria);
-  font-size: 1.5rem;
-  font-weight: 400;
-}
-
-.apresentacao__links {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 32px;
-}
-
-.apresentacao__links__subtitulo {
-  font-family: var(--fonte-primaria);
-  font-size: 1.5rem;
-  font-weight: 400;
-}
-
-.apresentacao__links__navegacao {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  color: var(--cor-secundaria);
-  border: 2px solid var(--cor-terciaria);
-  width: 50%;
-  text-align: center;
-  border-radius: 8px;
-  padding: 21.5px 0;
-  font-family: var(--fonte-secundaria);
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.apresentacao__links__navegacao:hover {
-  background-color: var(--cor-hover-botao);
-  color: #f6f6f6;
-}
-
-.apresentacao__lista {
   width: 100%;
-  display: flex;
-  gap: 38px;
-  flex-direction: column;
-}
-
-.apresentacao__lista__MP {
-  list-style: none;
-  font-family: var(--fonte-secundaria);
-  font-size: 0.9rem;
-  font-weight: 400;
-  margin: 10px 0;
-  line-height: 20px;
 }
 
 .apresentacao__lista__titulo {
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 23px;
 }
 
+.apresentacao__lista__MP {
+  width: 100%;
+  list-style: none;
+  font-family: var(--fonte-secundaria);
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 18px 0;
+  line-height: 20px;
+}
+
 .apresentacao__lista__MP li {
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   margin: 6px 0;
 }
 
 .lista__tecnologias img {
-  margin: 2px;
-}
-
-.apresentacao__lista__texto {
-  font-family: var(--fonte-secundaria);
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 1.2;
-  margin-bottom: 10px;
-}
-
-.apresentacao__lista__links {
-  color: var(--cor-terciaria);
-  font-size: 1.2rem;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.apresentacao__lista__links:hover {
-  color: var(--cor-hover-menu);
-}
-
-.apresentacao__imagem {
-  width: 35%;
-  height: auto;
-  object-fit: contain;
-  position: fixed;
-  top: 260px;
-  z-index: 2;
-  right: 260px;
-  width: 450px;
+  margin: 10px 2px 40px;
 }
 
 .rodape {
@@ -239,12 +139,18 @@ body {
 }
 
 @media (max-width: 1250px) {
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .cabecalho {
-    padding: 10%;
+    padding: 2% 0% 0% 0%;
   }
 
   .cabecalho__menu {
-    justify-content: center;
+    align-items: center;
   }
 
   .apresentacao {
@@ -274,7 +180,11 @@ body {
 
 @media screen and (max-width: 478px) {
   main {
-    margin: 1em 0;
+    margin: 0.5em 0;
+  }
+
+  main section {
+    width: 90%;
   }
 
   .cabecalho__menu {
@@ -307,7 +217,7 @@ body {
 
   .apresentacao__links__navegacao {
     font-size: 1.25rem;
-    width: 60%;
+    width: 90%;
     align-items: center;
   }
 
@@ -319,7 +229,6 @@ body {
     font-family: var(--fonte-secundaria);
     font-size: 0.9rem;
     font-weight: 400;
-    margin: 10px 0;
     line-height: 20px;
   }
 
@@ -329,5 +238,27 @@ body {
 
   .apresentacao__meus__projetos {
     width: 100%;
+  }
+
+  .titulo__MP {
+    margin-top: 2em;
+    display: flex;
+    text-align: center;
+  }
+
+  .titulo__MP a {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .apresentacao__links__MP {
+    display: flex;
+    text-align: center;
+  }
+
+  .lista__tecnologias img {
+    display: flex;
+    margin: 4px;
   }
 }
